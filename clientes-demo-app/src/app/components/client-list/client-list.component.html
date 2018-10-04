@@ -1,0 +1,25 @@
+<h1>Lista de clientes</h1>
+
+
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Height</th>
+    <th scope="col">Bithday</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let client of clients; let i = index" [attr.data-index]="i" [ngStyle]="i%2 ==0 ? tableStyle1 : tableStyle2">
+    <th scope="row"> <a [routerLink]="['/client/', i+1]">{{i+1}}</a></th>
+    <td>{{client.name}}</td>
+    <td>{{client.gender}}</td>
+    <td>{{client.height}}</td>
+    <td>{{client.birth_year}}</td>
+
+  </tr>
+
+

@@ -1,0 +1,116 @@
+/*comentarios
+comentarios
+*/
+@import "header";
+@import "button";
+@import "definir_mixin";
+@import "size_classes";
+
+
+.infobox{
+	width: 200px;
+	.message{
+		border: 1px solid red;
+		.title{
+			color: red; }}
+		.user {
+			border: 2px solid black;
+			.title{
+				color: black; 
+		}
+	}
+}
+
+button{
+	color: #DDD;
+}
+
+button.sidebar{
+	color: rgba(255,255,0,0.8);
+}
+.clase2 > {
+	.mensaje{
+		>.titulo{
+		color:red;
+		}
+	}
+}
+
+
+.clase2 {
+	color: blue;
+	.user &{
+		color:gray;
+	}
+}
+
+
+$header-background : #FFF;
+$link-color: #369;
+$menu-width: 300px;
+
+header{
+	background: $header-background;
+	.menu{
+		width: $menu-width;
+		background: white;
+	}
+	a{
+		color: $link-color;
+	}
+}
+
+.input-error{
+	@include alerta-text;
+	margin-botton: 10px;
+}
+
+
+$width: 40px;
+$double_width: $width + 2;
+$half_width: $width /2;
+
+.page{
+	color: mix(#336699, #993266);
+}
+
+.page2{
+	color:grayscale(#336699);
+}
+
+.informacion{
+		line-height: 1em;
+		color: #FFF;
+		@media(min-width: $medium-screen){
+			line-height:1.5 em;
+		}
+		@media(min-width:$large-screen){
+			line-height:2em;
+		}
+}
+
+@function cualquier($valor){
+	@return $valor * 2;
+}
+
+$normal-padding: 10px;
+
+.sidebar2{
+	padding:  $normal-padding cualquier($normal-padding)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

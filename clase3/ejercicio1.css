@@ -1,0 +1,92 @@
+/*comentarios
+comentarios
+*/
+header {
+  background: #AAAA;
+}
+
+a {
+  color: green;
+}
+
+.infobox {
+  width: 200px;
+}
+.infobox .message {
+  border: 1px solid red;
+}
+.infobox .message .title {
+  color: red;
+}
+.infobox .user {
+  border: 2px solid black;
+}
+.infobox .user .title {
+  color: black;
+}
+
+button {
+  color: #DDD;
+}
+
+button.sidebar {
+  color: rgba(255, 255, 0, 0.8);
+}
+
+.clase2 > .mensaje > .titulo {
+  color: red;
+}
+
+.clase2 {
+  color: blue;
+}
+.user .clase2 {
+  color: gray;
+}
+
+header {
+  background: #FFF;
+}
+header .menu {
+  width: 300px;
+  background: white;
+}
+header a {
+  color: #369;
+}
+
+.input-error {
+  color: #AE2;
+  font-size: 14px;
+  font-variant: small-caps;
+  margin-botton: 10px;
+}
+
+.page {
+  color: #664c80;
+}
+
+.page2 {
+  color: #666666;
+}
+
+.informacion {
+  line-height: 1em;
+  color: #FFF;
+}
+@media (min-width: 800px) {
+  .informacion {
+    line-height: 1.5 em;
+  }
+}
+@media (min-width: 1200px) {
+  .informacion {
+    line-height: 2em;
+  }
+}
+
+.sidebar2 {
+  padding: 10px 20px;
+}
+
+/*# sourceMappingURL=ejercicio1.css.map */

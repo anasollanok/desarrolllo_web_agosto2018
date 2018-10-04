@@ -18,7 +18,6 @@ export class ClientListComponent implements OnInit {
     "background-color" : "gray",
     "font-size" : "15px",
     "padding" : "20px",
-    "color":"white"
   };
 
   tableStyle2 =  {

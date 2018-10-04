@@ -18,17 +18,17 @@ export class ClientDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.client = this.getClient(params.id);
+       this.getClient(params.id);
     });
 
   }
 
 
 
-  getClient(id:string) {
+  getClient(id: string) {
     this.rest.getClient(id).subscribe((data: Client) => {
 
-      return this.client = data;
+       this.client = data;
     });
   }
 

@@ -32,14 +32,14 @@ export class ClientCallServiceService {
   getClients(): Observable<Client> {
     return this.http.get(this.endpoint + 'people').pipe(
       map(function(res){
-        return <Client> res.results;
-      });
+        return <Client> res['results'];
+      }));
   }
 
   getClient(id): Observable<any> {
     return this.http.get(this.endpoint + 'people/' + id).pipe(
       map(function(res){
-        console.log("Resultado en el servicio: "+res.name);
+
         return res;
       }));
   }

@@ -39,7 +39,6 @@ export class ClientCallServiceService {
   getClient(id): Observable<any> {
     return this.http.get(this.endpoint + 'people/' + id).pipe(
       map(function(res){
-
         return res;
       }));
   }

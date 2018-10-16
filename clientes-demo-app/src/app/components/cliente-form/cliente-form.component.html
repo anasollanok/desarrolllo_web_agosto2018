@@ -1,0 +1,20 @@
+<h1>Registro de un nuevo cliente</h1>
+<form [formGroup]="clientForm" (ngSubmit)="enviarFormulario()" >
+	<div class="form-group">
+		<label>Nombre:</label>
+		<input class='form-control form-control-lg' type='text' placeholder='nombre' formControlName='name' >
+		<div *ngIf="name.invalid">Nombre muy corto</div>
+		<div *ngIf="name.required">Campo requerido</div>
+
+
+
+
+	<label>Gender:</label>
+		<input class="form-control form-control-lg" type="text" placeholder="gender" formControlName='gender' >
+		<button class="btn btn-primary pull-xs-right" type="submit">Enviar</button>
+
+
+	</div>
+
+</form>
+{{clienteActual}}

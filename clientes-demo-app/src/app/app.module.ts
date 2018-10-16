@@ -8,8 +8,13 @@ import { ClientListComponent } from './components/client-list/client-list.compon
 import { ClientDetailComponent } from './components/client-detail/client-detail.component';
 import { EncabezadoComponent } from './components/encabezado/encabezado.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ClienteFormComponent } from './components/cliente-form/cliente-form.component';
+
 import { RoutingModule } from './routing.module';
-import { HttpClientModule } from '@angular/common/http'; //rest client call http rest service
+import { HttpClientModule } from '@angular/common/http';
+ //rest client call http rest service
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +22,14 @@ import { HttpClientModule } from '@angular/common/http'; //rest client call http
     ClientListComponent,
     ClientDetailComponent,
     EncabezadoComponent,
-    FooterComponent
+    FooterComponent,
+    ClienteFormComponent
   ],
   imports: [
     BrowserModule,
     RoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

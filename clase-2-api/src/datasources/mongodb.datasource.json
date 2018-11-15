@@ -1,0 +1,10 @@
+{
+  "name": "mongodb",
+  "connector": "mongodb",
+  "url": "",
+  "host": "ds155073.mlab.com",
+  "port": 55073,
+  "user": "test",
+  "password": "tvbl6u1m",
+  "database": "webapp_tec_2018"
+}

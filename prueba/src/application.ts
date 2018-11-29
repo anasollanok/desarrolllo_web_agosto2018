@@ -1,19 +1,12 @@
 import {BootMixin} from '@loopback/boot';
 import {ApplicationConfig} from '@loopback/core';
 import {RepositoryMixin} from '@loopback/repository';
-import {RestApplication,RestServer,RestBindings} from '@loopback/rest';
+import {RestApplication} from '@loopback/rest';
 import {ServiceMixin} from '@loopback/service-proxy';
 import {MySequence} from './sequence';
-import {
-  AuthenticationComponent,
-  AuthenticationBindings,
-} from '@loopback/authentication';
 import * as path from 'path';
-import {MyAuthStrategyProvider} from './providers/auth-strategy.provider';
 
-
-
-export class Clase2ApiApplication extends BootMixin(
+export class PruebaApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
   constructor(options: ApplicationConfig = {}) {
@@ -21,16 +14,6 @@ export class Clase2ApiApplication extends BootMixin(
 
     // Set up the custom sequence
     this.sequence(MySequence);
-
-    
-
-
-    this.component(AuthenticationComponent);
-
-    this.bind(AuthenticationBindings.STRATEGY).toProvider(
-      MyAuthStrategyProvider,
-    );
-
 
     // Set up default home page
     this.static('/', path.join(__dirname, '../../public'));
@@ -46,17 +29,4 @@ export class Clase2ApiApplication extends BootMixin(
       },
     };
   }
-
-
-async start() {
-    await super.start();
-
-    const server = await this.getServer(RestServer);
-    const port = await server.get(RestBindings.PORT);
-    console.log(`REST server running on port: ${port}`);
-  }
-
-
-
-  
 }

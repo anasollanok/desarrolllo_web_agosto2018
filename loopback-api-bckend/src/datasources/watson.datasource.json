@@ -1,0 +1,11 @@
+{
+  "name": "watson",
+  "connector": "rest",
+  "baseURL": "github.com",
+  "options": "asfd",
+  "operations": [
+    "afsdf",
+    "asff"
+  ],
+  "crud": true
+}

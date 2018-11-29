@@ -16,14 +16,27 @@ import {
   requestBody,
 } from '@loopback/rest';
 import {Materia} from '../models';
+import {inject} from '@loopback/context';
+import {
+  AuthenticationBindings,
+  UserProfile,
+  authenticate,
+} from '@loopback/authentication';
+
+
+
 import {MateriaRepository} from '../repositories';
 
 export class MateriaController {
   constructor(
     @repository(MateriaRepository)
     public materiaRepository : MateriaRepository,
+     @inject(AuthenticationBindings.CURRENT_USER) private user: UserProfile,
   ) {}
 
+
+
+ @authenticate('BasicStrategy')
   @post('/materias', {
     responses: {
       '200': {
@@ -36,6 +49,7 @@ export class MateriaController {
     return await this.materiaRepository.create(materia);
   }
 
+ @authenticate('BasicStrategy')
   @get('/materias/count', {
     responses: {
       '200': {
@@ -50,6 +64,7 @@ export class MateriaController {
     return await this.materiaRepository.count(where);
   }
 
+ @authenticate('BasicStrategy')
   @get('/materias', {
     responses: {
       '200': {

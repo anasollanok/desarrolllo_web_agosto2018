@@ -9,7 +9,7 @@ const oct = new Octokat(credenciales);
 
 //starwars
 const StarWarsAPI = require('star-wars-api');
-const swapi = new StarWarsAPI();
+
 
 
 
@@ -29,13 +29,6 @@ async getGithubInfo(
 		return respuesta;
 }
 
-@get('/personajesStarWars/{id}')
-	async getStarwars(
-		@param.path.string('id') id: string
-		):Promise<any>{
-		var personaje = await swapi.get('people',id);
-		return personaje;
-	}
 
 
 
